@@ -1,18 +1,19 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import GeneralInfo from "./GeneralInfo/GeneralInfo.jsx";
+import EducationalExperience from "./EducationalExperience/EducationalExperience.jsx";
+import PracticalExperience from "./PracticalExperience/PracticalExperience.jsx";
 import "../styles/App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [someState, setSomeState] = useState(null);
 
   return (
-    <>
-      <App />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          {count} click, ah ah ah!
-        </button>
-      </div>
-    </>
+    <div className="App">
+      <h1>CV Application</h1>
+      <GeneralInfo />
+      <EducationalExperience />
+      <PracticalExperience />
+    </div>
   );
 }
 
