@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import GeneralInfo from "./GeneralInfo/GeneralInfo.jsx";
 import EducationalExperience from "./EducationalExperience/EducationalExperience.jsx";
 import PracticalExperience from "./PracticalExperience/PracticalExperience.jsx";
