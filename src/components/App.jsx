@@ -50,7 +50,7 @@ function App() {
           }}
         />
         <EducationExperienceDisplay
-          education={educationExperiences}
+          educations={educationExperiences}
           onDelete={(index) => {
             const updatedSchool = [...educationExperiences];
             updatedSchool.splice(index, 1);
