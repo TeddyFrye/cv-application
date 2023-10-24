@@ -5,3 +5,51 @@
   text-align: center;
 }
 
+.app {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif; 
+  align-items: center;
+}
+
+.input-section, .display-section {
+  flex: 1;
+  background-color: #f7f9fc; /* Subtle background color */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.input-section > div, .display-section > div {
+  margin-bottom: 20px;
+  background-color: #ffffff; /* Differentiating the inner sections */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-section > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-section > div > label {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff; /* A vibrant color for buttons */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Indicates clickability */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darkened color on hover */
+}
