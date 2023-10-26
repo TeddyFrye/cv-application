@@ -41,7 +41,7 @@
 }
 
 button {
-  background-color: #007bff; /* A vibrant color for buttons */
+  background-color: #1b7ce4; /* A vibrant color for buttons */
   color: white;
   padding: 10px 20px;
   border: none;
@@ -52,4 +52,23 @@ button {
 
 button:hover {
   background-color: #0056b3; /* Darkened color on hover */
+}
+
+.toast {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.app .toast {
+  transform: translateY(0);
+  opacity: 1;
 }

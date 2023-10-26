@@ -22,7 +22,7 @@ const JobInfoInput = ({ onSubmit }) => {
   return (
     <div classjobname="job-info-input">
       <label>
-        Your job:
+        Your Job:
         <input
           type="text"
           value={job}
@@ -31,7 +31,7 @@ const JobInfoInput = ({ onSubmit }) => {
       </label>
 
       <label>
-        Your company:
+        Your Company:
         <input
           type="text"
           value={company}
@@ -40,7 +40,7 @@ const JobInfoInput = ({ onSubmit }) => {
       </label>
 
       <label>
-        tenure Info:
+        Tenure Info:
         <input
           type="text"
           value={tenure}

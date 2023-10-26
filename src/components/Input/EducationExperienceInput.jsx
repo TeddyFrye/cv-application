@@ -22,7 +22,7 @@ const EducationInfoInput = ({ onSubmit }) => {
   return (
     <div className="education-info-input">
       <label>
-        Your school:
+        Your School:
         <input
           type="text"
           value={school}
@@ -31,7 +31,7 @@ const EducationInfoInput = ({ onSubmit }) => {
       </label>
 
       <label>
-        Your degree:
+        Your Degree:
         <input
           type="text"
           value={degree}

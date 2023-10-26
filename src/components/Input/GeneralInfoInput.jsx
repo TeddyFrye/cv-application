@@ -4,6 +4,7 @@ const GeneralInfoInput = ({ onSubmit }) => {
   const [name, setName] = useState("");
   const [title, setTitle] = useState("");
   const [contact, setContact] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   const handleSubmit = () => {
     const info = {
@@ -12,6 +13,11 @@ const GeneralInfoInput = ({ onSubmit }) => {
       contact,
     };
     onSubmit(info);
+
+    if (!generalInfo) {
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000); // Hide the toast after 3 seconds
+    }
 
     // Reset the input fields after submit
     setName("");
