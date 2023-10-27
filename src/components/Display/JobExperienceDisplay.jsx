@@ -14,14 +14,16 @@ function JobExperienceDisplay({ experiences, onDelete, onEdit }) {
             <h3 onDoubleClick={() => setEditing({ type: "job", index })}>
               {editing && editing.type === "job" && editing.index === index ? (
                 <input
-                  defaultValue={experience.job}
+                  defaultValue={experience.job || "No title provided"} // Use placeholder text if job is empty
                   onBlur={(e) => {
                     onEdit(index, { ...experience, job: e.target.value });
                     setEditing(null);
                   }}
                 />
               ) : (
-                experience.job
+                experience.job || (
+                  <span className="placeholder">No title provided</span>
+                ) // Display placeholder if job is empty
               )}
             </h3>
             <p onDoubleClick={() => setEditing({ type: "company", index })}>
