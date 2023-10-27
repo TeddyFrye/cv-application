@@ -16,14 +16,16 @@ function EducationeducationDisplay({ educations, onDelete, onEdit }) {
               editing.type === "school" &&
               editing.index === index ? (
                 <input
-                  defaultValue={education.school}
+                  defaultValue={education.school || "No school name provided"}
                   onBlur={(e) => {
                     onEdit(index, { ...education, school: e.target.value });
                     setEditing(null);
                   }}
                 />
               ) : (
-                education.school
+                education.school || (
+                  <span className="placeholder">No school name provided</span>
+                )
               )}
             </h3>
             <p onDoubleClick={() => setEditing({ type: "degree", index })}>
