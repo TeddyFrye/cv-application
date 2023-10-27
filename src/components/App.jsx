@@ -12,11 +12,18 @@ function App() {
   const [jobExperiences, setJobExperiences] = useState([]);
   const [educationExperiences, setEducationExperiences] = useState([]);
   const [editingIndex, setEditingIndex] = useState({ type: null, index: null });
+  const [showToast, setShowToast] = useState(false);
 
   return (
     <div className="app">
+      {showToast && (
+        <div className="toast">Double click any information to edit</div>
+      )}
       <div className="input-section">
-        <GeneralInfoInput onSubmit={setGeneralInfo} />
+        <GeneralInfoInput
+          onSubmit={setGeneralInfo}
+          setShowToast={setShowToast}
+        />
         <JobExperienceInput
           onSubmit={(exp) => setJobExperiences([...jobExperiences, exp])}
         />
