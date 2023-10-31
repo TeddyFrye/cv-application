@@ -81,3 +81,33 @@ button:hover {
   transform: translateY(0);
   opacity: 1;
 }
+
+/* This gives an overall container to the clipboard */
+.clipboard-container {
+  background-color: #8e735b; /* Wooden texture */
+  border-radius: 10px;
+  padding: 20px 20px 40px 20px; /* Extra padding at the bottom to accommodate the clip */
+  position: relative; /* To be able to position the clip absolutely */
+}
+
+/* Metallic clip of clipboard */
+.clipboard-container::before {
+  content: "";
+  width: 80%;
+  height: 10px;
+  background-color: #d0d0d0; /* Metallic color */
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10%; /* Center the clip */
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Adds depth to the clip */
+}
+
+.display-section {
+  /* This makes the display section look like paper */
+  background-color: #fff; /* Paper color */
+  border: 1px solid #e0e0e0; /* Thin border around the paper */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 5px; /* Rounded corners for paper */
+  padding: 20px;
+}

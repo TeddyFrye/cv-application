@@ -33,43 +33,45 @@ function App() {
           }
         />
       </div>
-      <div className="display-section">
-        <GeneralInfoDisplay
-          generalInfo={generalInfo}
-          onDelete={() => setGeneralInfo(null)}
-          onEdit={(editedData) => {
-            setGeneralInfo(editedData);
-            setEditingIndex({ type: "general", index: null });
-          }}
-        />
-        <JobExperienceDisplay
-          experiences={jobExperiences}
-          onDelete={(index) => {
-            const updatedJobs = [...jobExperiences];
-            updatedJobs.splice(index, 1);
-            setJobExperiences(updatedJobs);
-          }}
-          onEdit={(index, editedData) => {
-            setEditingIndex({ type: "job", index });
-            const updatedJobs = [...jobExperiences];
-            updatedJobs[index] = editedData;
-            setJobExperiences(updatedJobs);
-          }}
-        />
-        <EducationExperienceDisplay
-          educations={educationExperiences}
-          onDelete={(index) => {
-            const updatedSchool = [...educationExperiences];
-            updatedSchool.splice(index, 1);
-            setEducationExperiences(updatedSchool);
-          }}
-          onEdit={(index, editedData) => {
-            setEditingIndex({ type: "education", index });
-            const updatedSchool = [...educationExperiences];
-            updatedSchool[index] = editedData;
-            setEducationExperiences(updatedSchool);
-          }}
-        />
+      <div className="clipboard-container">
+        <div className="display-section">
+          <GeneralInfoDisplay
+            generalInfo={generalInfo}
+            onDelete={() => setGeneralInfo(null)}
+            onEdit={(editedData) => {
+              setGeneralInfo(editedData);
+              setEditingIndex({ type: "general", index: null });
+            }}
+          />
+          <JobExperienceDisplay
+            experiences={jobExperiences}
+            onDelete={(index) => {
+              const updatedJobs = [...jobExperiences];
+              updatedJobs.splice(index, 1);
+              setJobExperiences(updatedJobs);
+            }}
+            onEdit={(index, editedData) => {
+              setEditingIndex({ type: "job", index });
+              const updatedJobs = [...jobExperiences];
+              updatedJobs[index] = editedData;
+              setJobExperiences(updatedJobs);
+            }}
+          />
+          <EducationExperienceDisplay
+            educations={educationExperiences}
+            onDelete={(index) => {
+              const updatedSchool = [...educationExperiences];
+              updatedSchool.splice(index, 1);
+              setEducationExperiences(updatedSchool);
+            }}
+            onEdit={(index, editedData) => {
+              setEditingIndex({ type: "education", index });
+              const updatedSchool = [...educationExperiences];
+              updatedSchool[index] = editedData;
+              setEducationExperiences(updatedSchool);
+            }}
+          />
+        </div>
       </div>
     </div>
   );
