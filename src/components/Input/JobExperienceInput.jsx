@@ -20,32 +20,38 @@ const JobInfoInput = ({ onSubmit }) => {
   };
 
   return (
-    <div classjobname="job-info-input">
+    <div className="job-info-input">
       <label>
-        Your Job:
-        <input
-          type="text"
-          value={job}
-          onChange={(e) => setjob(e.target.value)}
-        />
+        Your Job:{" "}
+        <span>
+          <input
+            type="text"
+            value={job}
+            onChange={(e) => setjob(e.target.value)}
+          />
+        </span>
       </label>
 
       <label>
-        Your Company:
-        <input
-          type="text"
-          value={company}
-          onChange={(e) => setcompany(e.target.value)}
-        />
+        Your Company:{" "}
+        <span>
+          <input
+            type="text"
+            value={company}
+            onChange={(e) => setcompany(e.target.value)}
+          />
+        </span>
       </label>
 
       <label>
-        Tenure Info:
-        <input
-          type="text"
-          value={tenure}
-          onChange={(e) => settenure(e.target.value)}
-        />
+        Tenure Info:{" "}
+        <span>
+          <input
+            type="text"
+            value={tenure}
+            onChange={(e) => settenure(e.target.value)}
+          />
+        </span>
       </label>
 
       <button onClick={handleSubmit}>Submit</button>

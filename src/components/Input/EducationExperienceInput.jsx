@@ -22,30 +22,36 @@ const EducationInfoInput = ({ onSubmit }) => {
   return (
     <div className="education-info-input">
       <label>
-        Your School:
-        <input
-          type="text"
-          value={school}
-          onChange={(e) => setschool(e.target.value)}
-        />
+        Your School:{" "}
+        <span>
+          <input
+            type="text"
+            value={school}
+            onChange={(e) => setschool(e.target.value)}
+          />
+        </span>
       </label>
 
       <label>
-        Your Degree:
-        <input
-          type="text"
-          value={degree}
-          onChange={(e) => setdegree(e.target.value)}
-        />
+        Your Degree:{" "}
+        <span>
+          <input
+            type="text"
+            value={degree}
+            onChange={(e) => setdegree(e.target.value)}
+          />
+        </span>
       </label>
 
       <label>
-        Graduation Year:
-        <input
-          type="text"
-          value={graduation}
-          onChange={(e) => setgraduation(e.target.value)}
-        />
+        Graduation Year:{" "}
+        <span>
+          <input
+            type="text"
+            value={graduation}
+            onChange={(e) => setgraduation(e.target.value)}
+          />
+        </span>
       </label>
 
       <button onClick={handleSubmit}>Submit</button>

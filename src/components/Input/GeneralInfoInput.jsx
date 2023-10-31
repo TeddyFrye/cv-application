@@ -24,30 +24,36 @@ const GeneralInfoInput = ({ onSubmit, setShowToast }) => {
   return (
     <div className="general-info-input">
       <label>
-        Your Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        Your Name:{" "}
+        <span>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </span>
       </label>
 
       <label>
-        Your Title:
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        Your Title:{" "}
+        <span>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </span>
       </label>
 
       <label>
-        Contact Info:
-        <input
-          type="text"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-        />
+        Contact Info:{" "}
+        <span>
+          <input
+            type="text"
+            value={contact}
+            onChange={(e) => setContact(e.target.value)}
+          />
+        </span>
       </label>
 
       <button onClick={handleSubmit}>Submit</button>
