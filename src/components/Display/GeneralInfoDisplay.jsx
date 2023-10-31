@@ -29,6 +29,7 @@ function GeneralInfoDisplay({ generalInfo, onEdit }) {
     <div>
       {generalInfo ? (
         <>
+          <h2>General Info</h2>
           <p onDoubleClick={() => handleDoubleClick("name")}>
             Name:{" "}
             {editingField === "name" ? (
@@ -70,7 +71,10 @@ function GeneralInfoDisplay({ generalInfo, onEdit }) {
           </p>
         </>
       ) : (
-        <p>No general info provided yet.</p>
+        <>
+          <h2>General Info</h2>
+          <p>No general info provided yet.</p>
+        </>
       )}
     </div>
   );

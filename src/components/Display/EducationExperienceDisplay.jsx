@@ -40,7 +40,7 @@ function EducationeducationDisplay({ educations, onDelete, onEdit }) {
                   }}
                 />
               ) : (
-                `degree: ${education.degree}`
+                `Degree: ${education.degree}`
               )}
             </p>
             <p onDoubleClick={() => setEditing({ type: "graduation", index })}>
@@ -55,7 +55,7 @@ function EducationeducationDisplay({ educations, onDelete, onEdit }) {
                   }}
                 />
               ) : (
-                `graduation: ${education.graduation}`
+                `Graduation: ${education.graduation}`
               )}
             </p>
             <button onClick={() => onDelete(index)}>Delete</button>
